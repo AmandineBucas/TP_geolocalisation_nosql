@@ -17,23 +17,47 @@ app.get('/', (req,res) => {
 
 server.lastPlayderID = 0
 
-// Appel du serveur sur le port 8081.
+// Appel du serveur sur le port 8081
 server.listen(8081, () => {
     console.log('Listening on '+server.address().port)
 })
 
 // Connexion à la base de données Redis
-
 var redis = require('redis');
 var client = redis.createClient();
 client.auth('IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', function (err) {
     if (err) throw err;
 });
 
+//Création d'un compte
 
-function connectAccount(){
+$(document).ready(function() {
+	$("#createAccount").click(function() {
+		// Déclaration des variables 
+		var username = $("#username").val();
+		var password = $("#password").val();
+		var confPassword = $("#confPassword").val();
+		
+// Si l'utilisateur, le mot de passe ou la confirmation de mot de passe est vide 
+if (username == '' ||  password == '' || confPassword == '') {
+	alert("Veuillez remplir tous les champs.");
 	
-//Récupération de l'username et du password
+	// Si le mot de passe ne correspond pas à la confirmation de mot de passe
+} else if (!(password).match(confPassword)) {
+	alert("Vos mots de passe ne correspondent pas. Veuillez réessayer.");
+} else {
+	// Sinon ouveerture de la géolocalisation
+	window.location = "index.html";
+	return false ; 
+}
+	}
+});
+
+// Connexion à un compte
+$(document).ready(function() {
+	$("#connectAccount").click(function() {
+
+// Récupération de l'username et du password
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 
@@ -60,6 +84,7 @@ if( attempt == 0){
 	document.getElementById("password").disabled = true;
 	document.getElementById("connect").disabled = true;
 return false;
+
 		}
 	}
-}
+});
