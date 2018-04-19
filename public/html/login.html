@@ -23,7 +23,7 @@
 		<input type="password" placeholder="Veuillez entrer votre mot de passe" name="password" id="password" style="width:250px;" required><br/><br/>
 
 		<label for="confirmPassword"><b>Confirmation de mot de passe :</b></label>
-		<input type="confirmPassword" placeholder="Veuillez entrer votre mot de passe" name="confirmPassword" style="width:250px;" required><br/><br/>
+		<input type="confirmPassword" placeholder="Veuillez entrer votre mot de passe" name="confirmPassword" id="confPassword" style="width:250px;" required><br/><br/>
 
 		<button type="submit" class="create" id="submit" onclick="createAccount()">Création de votre compte</button><br/><br/>
 	</form>
@@ -37,7 +37,7 @@
 
 	<h2>Vous possédez déjà un compte ? </h2>
 	<div class="container">
-	<form id="formId" method="post" name="myForm">
+	<form id="formId" method="get" name="myForm">
 	    <label for="username"><b>Login :</b></label>
 	    <input type="text" placeholder="Veuillez entrez votre login" name="username" id="username" style="width:250px;" required><br/><br/>
 
