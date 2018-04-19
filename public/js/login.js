@@ -47,12 +47,12 @@ return false;
 }
 else{
 	
+	// Initialisation d'un nombre d'essais à 3.
+	var attempt = 3;
+	
 	// Décrémentation du nombre d'essai
 	attempt --;
 	alert("Il vous reste "+attempt+" essais.");
-	
-// Initialisation d'un nombre d'essais à 3.
-var attempt = 3;
 
 if( attempt == 0){
 	// Desactivation des champs après trois essais.
