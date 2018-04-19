@@ -51,10 +51,11 @@ else{
 	attempt --;
 	alert("Il vous reste "+attempt+" essais.");
 	
-	
-// Desactivation des champs après trois essais.
+// Initialisation d'un nombre d'essais à 3.
+var attempt = 3;
 
 if( attempt == 0){
+	// Desactivation des champs après trois essais.
 	document.getElementById("username").disabled = true;
 	document.getElementById("password").disabled = true;
 	document.getElementById("connect").disabled = true;
