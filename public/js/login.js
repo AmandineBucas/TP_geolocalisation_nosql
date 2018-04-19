@@ -29,3 +29,36 @@ var client = redis.createClient();
 client.auth('IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', function (err) {
     if (err) throw err;
 });
+
+
+function connectAccount(){
+	
+//Récupération de l'username et du password
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+
+// Login = Bamaca ; Password = bamaca44
+if ( username == "Bamaca" && password == "bamaca44"){
+	alert ("Login successfully");
+
+// Si la connexion est passée, affichage de la page de géolocalisation.
+window.location = "index.html";
+return false;
+}
+else{
+	
+	// Décrémentation du nombre d'essai
+	attempt --;
+	alert("Il vous reste "+attempt+" essais.");
+	
+	
+// Desactivation des champs après trois essais.
+
+if( attempt == 0){
+	document.getElementById("username").disabled = true;
+	document.getElementById("password").disabled = true;
+	document.getElementById("connect").disabled = true;
+return false;
+		}
+	}
+}
