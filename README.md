@@ -13,5 +13,10 @@ TODO : Gestion de la localisation des amis.
 
 -------------------------------------------------------------
 
-- JS
+- nodeJS
 - HTML
+- Redis
+
+-------------------------------------------------------------
+
+Le dossier "node_modules" ne peut pas être commit sur gitHub.
