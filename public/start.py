@@ -4,7 +4,7 @@ import bottle_redis
 import redis
 
 redis_db = redis.StrictRedis(host='redis-19311.c2.eu-west-1-3.ec2.cloud.redislabs.com', port=19311,
-                            password='IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', db=0)
+                            password='Contact me to get it ! :D', db=0)
 
 app = bottle.Bottle()
 
