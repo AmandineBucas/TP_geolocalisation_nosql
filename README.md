@@ -16,6 +16,7 @@ TODO : Gestion de la localisation des amis.
 - nodeJS
 - HTML
 - Redis
+- Python
 
 -------------------------------------------------------------
 
