@@ -1,17 +1,5 @@
 //---------------------------------------------------------------------------------------------------\\
 
-// Connexion à la base de données Redis
-
-var redis = require('redis');
-var client = redis.createClient();
-client.auth('IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', function (err) {
-    if (err) throw err;
-});
-
-client.on('connect', function() {
-    console.log('Connected to Redis');
-});
-
 // Fonction permettant de géolocaliser quelqu'un
 
 function maPosition(position) {
@@ -79,3 +67,17 @@ navigator.geolocation.getCurrentPosition(maPosition, erreurPosition,{maximumAge:
 
 
 //---------------------------------------------------------------------------------------------------\\
+
+// Connexion à la base de données Redis 
+// Nous avons été obligés de la mettre à la fin car la connexion de l'école bloque
+// la connexion à la bdd et que la géolocalisation ne s'affiche pas
+
+var redis = require('redis');
+var client = redis.createClient();
+client.auth('IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', function (err) {
+    if (err) throw err;
+});
+
+client.on('connect', function() {
+    console.log('Connected to Redis');
+});
