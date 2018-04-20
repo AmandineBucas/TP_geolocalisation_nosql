@@ -25,7 +25,7 @@ server.listen(8081, () => {
 // Connexion à la base de données Redis
 var redis = require('redis');
 var client = redis.createClient();
-client.auth('IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', function (err) {
+client.auth('Contact me to get it ! :D', function (err) {
     if (err) throw err;
 });
 
