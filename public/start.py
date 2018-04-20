@@ -13,8 +13,8 @@ requiredFields = ("id", "username", "password")
 
 @app.route('/')
 @bottle.view('html/login.html')
-def hello():
-    return 'Hello World!'
+def home():
+    return None
 
 
 @app.route('/users/<user_id>', methods=['GET'])
