@@ -74,7 +74,7 @@ navigator.geolocation.getCurrentPosition(maPosition, erreurPosition,{maximumAge:
 
 var redis = require('redis');
 var client = redis.createClient();
-client.auth('IFH3xZOGT1IZdfzjmSehzdkfY7Qu3MNM', function (err) {
+client.auth('', function (err) {
     if (err) throw err;
 });
 
